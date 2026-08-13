@@ -1,0 +1,24 @@
+class LongestCommanPrefix_14 {
+    public String longestCommonPrefix(String[] strs) {
+        for(int i = 0; i < strs.length; i++){
+            for(int j = 0; j < strs.length-1; j++){
+                if(strs[j].compareTo(strs[j+1]) > 0){
+                    String temp = strs[j];
+                    strs[j] = strs[j+1];
+                    strs[j+1] = temp;
+                }
+            }
+        }
+        String s = "";
+        String s1 = strs[0];
+        String s2 = strs[strs.length - 1];
+        for(int i = 0; i < strs[0].length(); i++){
+            if(s1.charAt(i) == s2.charAt(i)){
+                s += s1.charAt(i);
+            }else{
+                break;
+            }
+        }
+        return s;
+    }
+}
