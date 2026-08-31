@@ -46,7 +46,7 @@ class RemovingMinAndMaxFromArray_2091 {
         }
         int middle = first + last;
 
-        // Comapare This numbers and find the Smallest One
+        // Compare This numbers and find the Smallest One
         if(front <= middle && front <= back){
             return front;
         }else if(back <= middle && back <= front){
